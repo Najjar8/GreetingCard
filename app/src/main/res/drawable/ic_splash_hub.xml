@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+         android:width="108dp"
+         android:height="108dp"
+         android:viewportWidth="24"
+         android:viewportHeight="24">
+         <!-- Material Symbol: hub -->
+         <path
+             android:fillColor="#FFFFFF"
+             android:pathData="M12,9C10.34,9 9,10.34 9,12C9,13.66 10.34,15 12,15C13.66,15 15,13.66 15,12C15,10.34 13.66,9 12,9ZM21,11H19.93C19.44,8.17 17.17,5.9 14.34,5.41V4.33C14.34,3.6 13.74,3 13,3H11C10.26,3 9.66,3.6 9.66,4.33V5.41C6.83,5.9 4.56,8.17 4.07,11H3C2.45,11 2,11.45 2,12C2,12.55 2.45,13 3,13H4.07C4.56,15.83 6.83,18.1 9.66,18.59V19.67C9.66,20.4 10.26,21 11,21H13C13.74,21 14.34,20.4 14.34,19.67V18.59C17.17,18.1 19.44,15.83 19.93,13H21C21.55,13 22,12.55 22,12C22,11.45 21.55,11 21,11Z"/>
+     </vector>

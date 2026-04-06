@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.GreetingCard" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.AcademicPulse.Splash" parent="Theme.SplashScreen">
+        <!-- System splash background matches our gradient start color -->
+        <item name="windowSplashScreenBackground">#0040A1</item>
+        <!-- Animated icon shown in the OS window (Android 12+) -->
+         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_hub</item>
+        <!-- Duration the animated icon plays (max 1000 ms on Android 12) -->
+         <item name="windowSplashScreenAnimationDuration">600</item>
+         <!-- Brand color shown under the icon on Android 12 -->
+        <item name="windowSplashScreenIconBackgroundColor">#0056D2</item>
+        <!-- Theme to switch to after the splash (your main Material3 theme) -->
+         <item name="postSplashScreenTheme">@style/Theme.GreetingCard</item>
+     </style>
+
+</resources>
