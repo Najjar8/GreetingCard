@@ -3,6 +3,7 @@ package com.example.greetingcard.activities
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -28,7 +29,6 @@ import androidx.compose.material3.ButtonDefaults.buttonColors
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.TopAppBarScrollBehavior
 import com.example.greetingcard.Screens
-
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -87,21 +87,28 @@ fun ButtonGrid(navController: NavController) {
         modifier = Modifier.fillMaxSize().fillMaxWidth().padding(5.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-
-        HomeButton(onClick = {navController.navigate(Screens.Images.name)}, text = "Grid")
-        HomeButton(onClick = {navController.navigate(Screens.Gallery.name)}, text = "Gallery")
-        HomeButton(onClick = {navController.navigate(Screens.Tasks.name)}, text = "Tasks")
-        HomeButton(onClick = {navController.navigate(Screens.Test.name)}, text = "Profile")
+        Row(modifier = Modifier.fillMaxWidth()){
+            HomeButton(onClick = {navController.navigate(Screens.Images.name)}, text = "Grid",
+                modifier = Modifier.weight(1f).height(200.dp))
+            HomeButton(onClick = {navController.navigate(Screens.Gallery.name)}, text = "Gallery",
+                modifier = Modifier.weight(1f).height(200.dp))
+        }
+        Row(modifier = Modifier.fillMaxWidth()){
+            HomeButton(onClick = {navController.navigate(Screens.Tasks.name)}, text = "Tasks",
+                modifier = Modifier.weight(1f).height(200.dp))
+            HomeButton(onClick = {navController.navigate(Screens.Test.name)}, text = "Profile",
+                modifier = Modifier.weight(1f).height(200.dp))
+        }
 
     }
 
 }
 
 @Composable
-fun HomeButton(onClick: () -> Unit, text: String){
+fun HomeButton(onClick: () -> Unit, text: String, modifier: Modifier = Modifier){
     Button(
         onClick = {onClick()},
-        modifier = Modifier.height(50.dp).fillMaxWidth(),
+        modifier = modifier,
         colors = buttonColors(containerColor = Color(4, 83, 200))
     ){
         Text(text)
