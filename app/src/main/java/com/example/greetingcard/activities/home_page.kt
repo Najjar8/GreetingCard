@@ -89,15 +89,15 @@ fun ButtonGrid(navController: NavController) {
     ) {
         Row(modifier = Modifier.fillMaxWidth()){
             HomeButton(onClick = {navController.navigate(Screens.Images.name)}, text = "Grid",
-                modifier = Modifier.weight(1f).height(200.dp))
+                modifier = Modifier.weight(1f))
             HomeButton(onClick = {navController.navigate(Screens.Gallery.name)}, text = "Gallery",
-                modifier = Modifier.weight(1f).height(200.dp))
+                modifier = Modifier.weight(1f))
         }
         Row(modifier = Modifier.fillMaxWidth()){
             HomeButton(onClick = {navController.navigate(Screens.Tasks.name)}, text = "Tasks",
-                modifier = Modifier.weight(1f).height(200.dp))
+                modifier = Modifier.weight(1f))
             HomeButton(onClick = {navController.navigate(Screens.Test.name)}, text = "Profile",
-                modifier = Modifier.weight(1f).height(200.dp))
+                modifier = Modifier.weight(1f))
         }
 
     }
@@ -108,7 +108,7 @@ fun ButtonGrid(navController: NavController) {
 fun HomeButton(onClick: () -> Unit, text: String, modifier: Modifier = Modifier){
     Button(
         onClick = {onClick()},
-        modifier = modifier,
+        modifier = modifier.height(180.dp).padding(10.dp),
         colors = buttonColors(containerColor = Color(4, 83, 200))
     ){
         Text(text)
